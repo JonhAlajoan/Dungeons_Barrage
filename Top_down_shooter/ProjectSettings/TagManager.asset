@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - target
+  - Puxavel
+  - Muzzle
+  - projectileWind
+  - projectileFire
+  - projectileFrozen
+  - enemyFire
+  - enemyLight
+  - enemyFrozen
+  - enemyWind
+  - Vermelho
+  - Laranja
+  - projectileCarranca
+  - enemyCarranca
+  - Spawner
+  - Score
+  - Cross
+  - PlayerHP
+  - normal
+  - hard
+  - insane
+  - dropPower
+  - bulletLevel2
+  - audioSource
+  - shield
+  - Shaman
+  - Manager
+  - canvasComum
+  - canvasPause
+  - textHealth
+  - textBomb
+  - textWpower
+  - tutorial
+  - cameraParent
+  - textWpowerSub
+  - textBombSub
+  - canvasTutorial
+  - ClassTxt
+  - DescrTxt
+  - SpecialTxt
+  - Chao
+  - Jera
+  - Ken
+  - Isa
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - Player
+  - uiParticles
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Trail
+    uniqueID: 3977435457
+    locked: 0

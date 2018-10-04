@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c2f9fe0f445a93741bcfa9cc4eae579b
+timeCreated: 1501036545
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Satellite
+  fontNames:
+  - Satellite
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6923cd2925cd29b469311976087a28a9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

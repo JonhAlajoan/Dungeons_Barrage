@@ -1,0 +1,1087 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1627546955679342}
+  m_IsPrefabParent: 1
+--- !u!1 &1627546955679342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4745950528715800}
+  - component: {fileID: 114345955268117600}
+  m_Layer: 0
+  m_Name: Pooling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4745950528715800
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1627546955679342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -80.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114345955268117600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1627546955679342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddf7a5150a474960a78be74651f1a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recycleBinCollection:
+  - prefab: {fileID: 1463075815356952, guid: 9678c18e76dd7f341abdce08341589b2, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1699021412872122, guid: aaf230974bf5a2b4da6920cf41a503ed, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1829571760596452, guid: 80fb1da9008db934ca60a4a7e42431ea, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1097258766648946, guid: aaf08cff0b59edc4aba6a339bdf50973, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1132988969655316, guid: a5bc333d9780d4c419cb3aff8c8993a5, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 20
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1214083090930314, guid: ffce63c928e27114da7792efe8e2ca57, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 50
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1033268352912218, guid: 0e20b2428ef94d24699e58757156024e, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1120647153887256, guid: a5a68c757000ebf44a4591b6a271b208, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 50
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1315480887684130, guid: 2ec9e3ebd60ffb149a2c8357700a2781, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 20
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1270363674359356, guid: 8fb393357358ef64bbecddd8da2d3ea3, type: 2}
+    instancesToPreallocate: 80
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 80
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1831352053733410, guid: addbefca663fd284999d1197acc9b3c8, type: 2}
+    instancesToPreallocate: 500
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 500
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1450761335171962, guid: a1fcf74031fb2a549bba2d8f2f91312b, type: 2}
+    instancesToPreallocate: 100
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 100
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1007272535700962, guid: 2df74f02870ff08479f9e7b50893afb3, type: 2}
+    instancesToPreallocate: 80
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 80
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1005476145663766, guid: 69f1308a92e17a843b074ffd3780cab6, type: 2}
+    instancesToPreallocate: 500
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 500
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1865140514032084, guid: 77781f03d7462a24387577ba5c94045e, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1252218563425788, guid: 7d7cf0737291f4146934cfbc73a40e5a, type: 2}
+    instancesToPreallocate: 15
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 15
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1385474961978886, guid: 0d5ad7750b6e4f3438c33d76f514e25c, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 30
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1887266441967082, guid: b73ddcc0f1d4c00448327c1a865ad34a, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 1
+    hardLimit: 20
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1087208900360560, guid: a0af2156297737b42b6346a270dac816, type: 2}
+    instancesToPreallocate: 300
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 300
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1447660890813454, guid: d286d984828e5c24aaf11b6a21d5685d, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1279865955109932, guid: 9b1d1bec9b919a94c890fd18142e727c, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1582477628902920, guid: 396307558db59a74682cc60bea6e1248, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1979024478770158, guid: 67b9f58a115c8eb48976f1d1c3e5897e, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1431103269849080, guid: acdd421f90dbb304d95b6bea301b052f, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1961428665253834, guid: 187e8ac79d4d3d04f92659650245f264, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1737759570992206, guid: 81118c8346a1cf3428973e9d11875809, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1231877274774830, guid: 426ce3dc06e69bc498543c78a3a91fb7, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1692425321615330, guid: 35029383347b6714b8dd50f2347cfae9, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1748976706058470, guid: 15d37da8705e2a74187a7b73c9898141, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1809078079926996, guid: dbf2760451db7e6429f519c8c5cd0885, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1189100396892782, guid: afe8ac686510754498fdc2dd2e8d7d48, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1866614412535054, guid: a592cdc86e3cc3a4ca03ab1d6c3b2bed, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1943295045572854, guid: 9b01f6226ad5fd649ba968ea2458edca, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1186370869842986, guid: d2feb119f4418f749bed0ac0629344ac, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1996226936005972, guid: cfa776d1a1d2eeb409511ad12ecadd55, type: 2}
+    instancesToPreallocate: 100
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1359881561747794, guid: b500eb7b22ae7c44995d148b558c8743, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1879683621155194, guid: 8e8c9e7274af8d5489a3bebc90e93364, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1791940476006828, guid: d0a7b8259ac5da14e84be0dc10186dad, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1705261561737796, guid: b7a9cc2cd14b37d41b53bc202354b9bd, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1535121509106592, guid: 28c6f4051444ead479538ab12ea5dac8, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1404530765533412, guid: 5c8c275d5224bf8498a24916821b80b4, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1544370801101580, guid: 831386a9af5a5334186b2d757b5787ab, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1171811625744800, guid: 1cbc89cefc9603a43baeda59c7f1ab12, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1951850246206148, guid: d0ddda1a7809f2f4a802cbecdb08dcb1, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1602384635676014, guid: f3778c96f84cfe84caf0a235b0898389, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1834285067511948, guid: f8258156dd5b29245815de8fabed1e3b, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1378500656296106, guid: d857a40ac5e49d743a29118d5875c837, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1442166220353516, guid: 2b256d02b193d2c44a627c4180a7bed4, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1909423520721922, guid: ad5ab4f92a3a09a4db225561be8b4b13, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1327431954341500, guid: 1231908df7104434c9039e1938a1fc69, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1365157250470176, guid: e1a7fbcc5c0b2944d945e06b0bee5910, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1186547393270948, guid: bf04147638b02b540beffc1c931f0553, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1708562586887598, guid: ee0caf67f1f0c1b4b894e43acfd7f1d3, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1206239156387854, guid: ab3a9b0a7e208624087e53f841500393, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1083990649870900, guid: 409846ea57822ec45b7a9ccfb2e1cab1, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1687207782535794, guid: 9d62f4737c5ca1e48a526ae766b63342, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1949993989373526, guid: 2cf7d2f5722595845847b61b03523b33, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1612033108088042, guid: 0b68e327dfe985a428ebec4404eac4af, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1572313793884674, guid: 149e7e07481809b4caddfa84fdcd4251, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1352406812926644, guid: b119def85d87ef54d9407cca14776c0d, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1247800198568638, guid: 9b55a948564d01f4dac341d35331799c, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1556529987328878, guid: c9e17c2d1917d714e97083b0aec30285, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1589908270864130, guid: 066c4375a26af0d41b438fe9f3cca33a, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1679375692162332, guid: cdb4984398010484da00ccb977be500b, type: 2}
+    instancesToPreallocate: 50
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1658162849094600, guid: f9bf6361efb9e7e4bba1da56753f84ea, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1818139732906760, guid: 4ec1ff74261f4df4e9df551602ef77e8, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1475627335465480, guid: 40ed127c66cbe93469dcab51f6d626da, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1309189126814154, guid: 491bc8a04cba1de40b3a1af5d3a0eca5, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1248973405673076, guid: 94791a793b4b12d419bec9db9df4590e, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1126143062616796, guid: 4feb26979ee93434daf80d752cf64bbc, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1483064282975874, guid: b3921036199561042b3fcd0b3ba868ca, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1157804909455606, guid: af3efc1dc4dbdf94fa40fd95c352029a, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1212220550567576, guid: 8b951440f0c8cec429391f4fbf37aad0, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1267569751008186, guid: 78ce8a370bdbd3f4397b4b866958ac63, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1260679553125626, guid: f9f7141fea8a4cd4c91e7d74f8288319, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1673075644441092, guid: 820e75e8bee6e9b41a1d66aa9fe8f0ca, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1800812782497284, guid: 7c8fbdc8a63ccae48afa57caff665389, type: 2}
+    instancesToPreallocate: 15
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1449677363732588, guid: bd75d85c43707d24ba7880d6b50b405d, type: 2}
+    instancesToPreallocate: 15
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1113142070879084, guid: 028ac9f579e0afe4e8140c28aec14056, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1962903508932756, guid: 44471345bfc6fdd4db2fd86d8bc2c283, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1894491875900608, guid: 6558ac9519f22ff4da5f270089cc38ee, type: 2}
+    instancesToPreallocate: 30
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1692253831339744, guid: 05bff1c8a2cab384fb32b8dfd82084dc, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 1
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1964900808236078, guid: cd44a1cc21b214f43b4c47135a34383e, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1841042281759364, guid: 2c82a8b52991e924baebd3f26fc0ed90, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1909834571654790, guid: 1d98e75eff3b6a8439cf1a9a3fb0273c, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1906267244094774, guid: 64727b23d177dc84dae850f270172ade, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1209834434739496, guid: 6b4273f4023dd134a956f52d4ac965ae, type: 2}
+    instancesToPreallocate: 15
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1090715253456212, guid: 2f5e4c8606ac3d342a94f677c40687d4, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1710212644184868, guid: 752a53452605bf54e83900d21639eb7c, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1068906342687218, guid: 2bab7916f3dcaa042b0132f92b5faf7d, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1767661516838994, guid: 0575aa0fe2a32c54f93b7828f23260ae, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1809700516495304, guid: 522c5f9734afb3a469fbb1e3dcbf8447, type: 2}
+    instancesToPreallocate: 20
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1505463933859182, guid: a71539b0e06b97844a12e2026b8c2304, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1712810037263498, guid: b15d5633c909d454cbccff1b3deabdf4, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1842161392265526, guid: 706c689ad50f4444080b1efeac624d55, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1215590592153984, guid: a3b17b8f98654d74792b45cf13697e28, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1605750680285390, guid: f16a0dc68482f9f469aaf6f701bfdff4, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1829713443147918, guid: 3f066437af1659d47857b7182ea19ebe, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1697161708293200, guid: 2ffc40c5401347b45bfdbf1a4a94a333, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 0
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1620317094269932, guid: cc89c87372687f446928237b03fc661f, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1048614949330950, guid: 8e8c9e7274af8d5489a3bebc90e93364, type: 2}
+    instancesToPreallocate: 10
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1188689368506874, guid: 261c8f4a73a983343ad0482f85a1aa94, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  - prefab: {fileID: 1068657816216162, guid: 94791a793b4b12d419bec9db9df4590e, type: 2}
+    instancesToPreallocate: 5
+    instancesToAllocateIfEmpty: 1
+    imposeHardLimit: 0
+    hardLimit: 5
+    cullExcessPrefabs: 0
+    instancesToMaintainInPool: 5
+    cullInterval: 10
+    automaticallyRecycleParticleSystems: 1
+    persistBetweenScenes: 0
+  cullExcessObjectsInterval: 10
+  persistBetweenScenes: 0
+  transform: {fileID: 0}

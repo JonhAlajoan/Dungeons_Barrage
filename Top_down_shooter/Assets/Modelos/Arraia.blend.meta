@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 0648ef8b463fd464398f37a5f8796cfc
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature_001
+    100004: //RootNode
+    100006: Bone
+    100008: Bone_0
+    100010: Bone_001
+    100012: Bone_002
+    100014: Bone_003
+    100016: Bone_004
+    100018: Bone_2
+    100020: Bone_3
+    100022: Bone_4
+    100024: Bone_5
+    100026: Bone_L
+    100028: Bone_L_0
+    100030: Bone_L_001
+    100032: Bone_L_002
+    100034: Bone_L_004
+    100036: Bone_L_005
+    100038: Bone_L_006
+    100040: Bone_L_2
+    100042: Bone_L_3
+    100044: Bone_L_5
+    100046: Bone_L_6
+    100048: Bone_L_7
+    100050: Bone_R
+    100052: Bone_R_0
+    100054: Bone_R_001
+    100056: Bone_R_002
+    100058: Bone_R_004
+    100060: Bone_R_005
+    100062: Bone_R_006
+    100064: Bone_R_2
+    100066: Bone_R_3
+    100068: Bone_R_5
+    100070: Bone_R_6
+    100072: Bone_R_7
+    100074: StingRay
+    400000: Armature
+    400002: Armature_001
+    400004: //RootNode
+    400006: Bone
+    400008: Bone_0
+    400010: Bone_001
+    400012: Bone_002
+    400014: Bone_003
+    400016: Bone_004
+    400018: Bone_2
+    400020: Bone_3
+    400022: Bone_4
+    400024: Bone_5
+    400026: Bone_L
+    400028: Bone_L_0
+    400030: Bone_L_001
+    400032: Bone_L_002
+    400034: Bone_L_004
+    400036: Bone_L_005
+    400038: Bone_L_006
+    400040: Bone_L_2
+    400042: Bone_L_3
+    400044: Bone_L_5
+    400046: Bone_L_6
+    400048: Bone_L_7
+    400050: Bone_R
+    400052: Bone_R_0
+    400054: Bone_R_001
+    400056: Bone_R_002
+    400058: Bone_R_004
+    400060: Bone_R_005
+    400062: Bone_R_006
+    400064: Bone_R_2
+    400066: Bone_R_3
+    400068: Bone_R_5
+    400070: Bone_R_6
+    400072: Bone_R_7
+    400074: StingRay
+    4300000: StingRay
+    7400000: Default Take
+    7400002: anim_attack_ranged
+    7400004: anim_dano
+    7400006: anim_morte
+    7400008: Idle
+    9500000: //RootNode
+    13700000: StingRay
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialTudao_000
+    second: {fileID: 2100000, guid: 14e8b1c9880fc23468d04027c3db4fe2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

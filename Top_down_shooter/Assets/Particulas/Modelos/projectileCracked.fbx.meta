@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 42c9b6abd6a023f4fa1f6b294bd97043
+timeCreated: 1516399849
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Crack1
+    100002: Crack10
+    100004: Crack11
+    100006: Crack2
+    100008: Crack3
+    100010: Crack4
+    100012: Crack5
+    100014: Crack6
+    100016: Crack7
+    100018: Crack8
+    100020: Crack9
+    100022: //RootNode
+    400000: Crack1
+    400002: Crack10
+    400004: Crack11
+    400006: Crack2
+    400008: Crack3
+    400010: Crack4
+    400012: Crack5
+    400014: Crack6
+    400016: Crack7
+    400018: Crack8
+    400020: Crack9
+    400022: //RootNode
+    2300000: Crack1
+    2300002: Crack10
+    2300004: Crack11
+    2300006: Crack2
+    2300008: Crack3
+    2300010: Crack4
+    2300012: Crack5
+    2300014: Crack6
+    2300016: Crack7
+    2300018: Crack8
+    2300020: Crack9
+    3300000: Crack1
+    3300002: Crack10
+    3300004: Crack11
+    3300006: Crack2
+    3300008: Crack3
+    3300010: Crack4
+    3300012: Crack5
+    3300014: Crack6
+    3300016: Crack7
+    3300018: Crack8
+    3300020: Crack9
+    4300000: Crack1
+    4300002: Crack11
+    4300004: Crack4
+    4300006: Crack3
+    4300008: Crack2
+    4300010: Crack10
+    4300012: Crack9
+    4300014: Crack8
+    4300016: Crack7
+    4300018: Crack5
+    4300020: Crack6
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: runas
+    second: {fileID: 2100000, guid: 7aa9f968380a4b64286cfc070f28e597, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

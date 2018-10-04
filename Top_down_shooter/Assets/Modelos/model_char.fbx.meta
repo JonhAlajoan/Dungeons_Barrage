@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 0fd8d5b2d50a0a64c8bdd67bda83c585
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BezierCircle
+    100002: Cylinder
+    100004: Gem.000
+    100006: Gem.001
+    100008: Gem.003
+    100010: Helix
+    100012: Man
+    100014: Man.003
+    100016: Man.005
+    100018: Man.006
+    100020: //RootNode
+    100022: Plane
+    100024: Plane.001
+    100026: Torus.000
+    100028: Torus.009
+    400000: BezierCircle
+    400002: Cylinder
+    400004: Gem.000
+    400006: Gem.001
+    400008: Gem.003
+    400010: Helix
+    400012: Man
+    400014: Man.003
+    400016: Man.005
+    400018: Man.006
+    400020: //RootNode
+    400022: Plane
+    400024: Plane.001
+    400026: Torus.000
+    400028: Torus.009
+    2300000: BezierCircle
+    2300002: Cylinder
+    2300004: Gem.000
+    2300006: Gem.001
+    2300008: Gem.003
+    2300010: Helix
+    2300012: Man
+    2300014: Man.003
+    2300016: Man.005
+    2300018: Man.006
+    2300020: Plane
+    2300022: Plane.001
+    2300024: Torus.000
+    2300026: Torus.009
+    3300000: BezierCircle
+    3300002: Cylinder
+    3300004: Gem.000
+    3300006: Gem.001
+    3300008: Gem.003
+    3300010: Helix
+    3300012: Man
+    3300014: Man.003
+    3300016: Man.005
+    3300018: Man.006
+    3300020: Plane
+    3300022: Plane.001
+    3300024: Torus.000
+    3300026: Torus.009
+    4300000: BezierCircle
+    4300002: Cylinder
+    4300004: Gem.000
+    4300006: Gem.001
+    4300008: Gem.003
+    4300010: Helix
+    4300012: Man
+    4300014: Man.003
+    4300016: Man.005
+    4300018: Man.006
+    4300020: Plane
+    4300022: Plane.001
+    4300024: Torus.000
+    4300026: Torus.009
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brilhante
+    second: {fileID: 2100000, guid: ab8b2d370866a154895690eee84f0487, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialTudao
+    second: {fileID: 2100000, guid: c64fc11ac304bb04786dfc07dabe026d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

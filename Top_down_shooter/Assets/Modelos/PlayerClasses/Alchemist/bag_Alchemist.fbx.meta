@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: cdfcfe007c35cab4d88347bc8f07e931
+timeCreated: 1513366348
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cone.001
+    100004: Cone.002
+    100006: Cone.003
+    100008: Cube.104
+    100010: Cylinder.027
+    100012: Cylinder.028
+    100014: Cylinder.029
+    100016: Cylinder.030
+    100018: Cylinder.031
+    100020: Icosphere.023
+    100022: Icosphere.024
+    100024: Icosphere.025
+    400000: //RootNode
+    400002: Cone.001
+    400004: Cone.002
+    400006: Cone.003
+    400008: Cube.104
+    400010: Cylinder.027
+    400012: Cylinder.028
+    400014: Cylinder.029
+    400016: Cylinder.030
+    400018: Cylinder.031
+    400020: Icosphere.023
+    400022: Icosphere.024
+    400024: Icosphere.025
+    2300000: Cone.001
+    2300002: Cone.002
+    2300004: Cone.003
+    2300006: Cube.104
+    2300008: Cylinder.027
+    2300010: Cylinder.028
+    2300012: Cylinder.029
+    2300014: Cylinder.030
+    2300016: Cylinder.031
+    2300018: Icosphere.023
+    2300020: Icosphere.024
+    2300022: Icosphere.025
+    3300000: Cone.001
+    3300002: Cone.002
+    3300004: Cone.003
+    3300006: Cube.104
+    3300008: Cylinder.027
+    3300010: Cylinder.028
+    3300012: Cylinder.029
+    3300014: Cylinder.030
+    3300016: Cylinder.031
+    3300018: Icosphere.023
+    3300020: Icosphere.024
+    3300022: Icosphere.025
+    4300000: Cone.001
+    4300002: Cone.002
+    4300004: Cone.003
+    4300006: Cube.104
+    4300008: Cylinder.027
+    4300010: Cylinder.028
+    4300012: Cylinder.029
+    4300014: Cylinder.030
+    4300016: Cylinder.031
+    4300018: Icosphere.023
+    4300020: Icosphere.024
+    4300022: Icosphere.025
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialAlchemis.002
+    second: {fileID: 2100000, guid: 6f97ea60e47ca6440a5a3c5f318053ed, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

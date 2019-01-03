@@ -27,6 +27,8 @@ public class SettingManager : MonoBehaviour {
     bool bloom;
     bool ambientOcclusion;
 
+	bool firstTimeLoaded;
+
 	void OnEnable()
 	{
         
@@ -97,27 +99,41 @@ public class SettingManager : MonoBehaviour {
 
 	}
 	public void LoadSettings(){
-        AntiAliasingToggle.isOn = SaveGame.Load("antiAliasing", antiAliasing);
-        Debug.Log("Carregado Antialiasing: " + AntiAliasingToggle.isOn);
 
-        BloomToggle.isOn = SaveGame.Load("bloom", bloom);
-        Debug.Log("Carregado Bloom: " + BloomToggle.isOn);
+		if(firstTimeLoaded)
+		{
+			bloom = true;
+			antiAliasing = true;
+			ambientOcclusion = true;
+			firstTimeLoaded = false;
+			SaveGame.Save("firstTimeLoaded", firstTimeLoaded);
+		}
 
-        AmbientOcclusionToggle.isOn = SaveGame.Load("ambientOcclusion", ambientOcclusion);
-        Debug.Log("Carregado Ambient OCc " + AmbientOcclusionToggle.isOn);
+		else
+		{
+			AntiAliasingToggle.isOn = SaveGame.Load("antiAliasing", antiAliasing);
+			Debug.Log("Carregado Antialiasing: " + AntiAliasingToggle.isOn);
 
-        gameSettings = JsonUtility.FromJson<gameSettings>(File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
-		musicVolumeSlider.value = gameSettings.musicVolume;
-		textureQualityDropdown.value = gameSettings.textureQuality;
-		resolutionDropdown.value = gameSettings.resolutionIndex;
-		fullscreenToggle.isOn = gameSettings.fullscreen;
-		Screen.fullScreen = gameSettings.fullscreen;
+			BloomToggle.isOn = SaveGame.Load("bloom", bloom);
+			Debug.Log("Carregado Bloom: " + BloomToggle.isOn);
+
+			AmbientOcclusionToggle.isOn = SaveGame.Load("ambientOcclusion", ambientOcclusion);
+			Debug.Log("Carregado Ambient OCc " + AmbientOcclusionToggle.isOn);
+
+			gameSettings = JsonUtility.FromJson<gameSettings>(File.ReadAllText(Application.persistentDataPath + "/gamesettings.json"));
+			musicVolumeSlider.value = gameSettings.musicVolume;
+			textureQualityDropdown.value = gameSettings.textureQuality;
+			resolutionDropdown.value = gameSettings.resolutionIndex;
+			fullscreenToggle.isOn = gameSettings.fullscreen;
+			Screen.fullScreen = gameSettings.fullscreen;
 
 
-		resolutionDropdown.RefreshShownValue ();
+			resolutionDropdown.RefreshShownValue();
 
-      
-}
+		}
+
+
+	}
     
 
 }

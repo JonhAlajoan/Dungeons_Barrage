@@ -40,6 +40,7 @@ public class LunarKnightController : ClassesPlayer
        {
                 sfxController.PlaySFXSounds("ZaWarudo");
                 animaController.SetTrigger("callVortex");
+				//TrashMan.spawn();
                 Heal(2);
                 StartCoroutine(DisableColliderSpecial());
                 specialQuantity--;

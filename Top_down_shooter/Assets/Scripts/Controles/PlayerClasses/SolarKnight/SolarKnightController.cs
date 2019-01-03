@@ -63,10 +63,9 @@ public class SolarKnightController : ClassesPlayer
     {
         ZoomOut();
         yield return new WaitForSeconds(10.0f);
-        camAnimatorController.SetBool("CamZoomOut", false);
-        animaController.SetBool("callVortex", false);
-        controller.enabled = true;
-        thisCollider.enabled = true;
+		ZoomIn();
+		isSpecialActive = false;
+		isSunInteractive = false;
     }
 
     public override void Attack()
@@ -94,7 +93,7 @@ public class SolarKnightController : ClassesPlayer
         if(specialQuantity>0)
         {
             GameObject Special = TrashMan.spawn("Sol", specialMuzzle.transform.position, new Quaternion(0, 0, 0, 0));
-            Special.transform.parent = specialMuzzle.parent;
+           
             controller.enabled = false;
             thisCollider.enabled = false;
             isSpecialActive = true;

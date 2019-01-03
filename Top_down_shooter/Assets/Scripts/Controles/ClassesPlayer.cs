@@ -179,6 +179,7 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
                 postProcessing.depthOfField.enabled = false;
                 hasFoundAllReferences = true;
 
+
             }
 
         }
@@ -192,13 +193,21 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
 
         controller.Move(movement);
         healthTxt.text = health.ToString();
-        textBombCooldown.text = specialQuantity.ToString("#0"); 
-       
+        textBombCooldown.text = specialQuantity.ToString("#0");
 
+		Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        detectController();
+		Plane groundPlane = new Plane(Vector3.up, Vector3.up * GunHeight);
+		float rayDistance;
 
-        if (flagCursor == 1)
+		if (groundPlane.Raycast(ray, out rayDistance))
+		{
+			Vector3 point = ray.GetPoint(rayDistance);
+			this.LookAt(point);
+			crosshairs.position = point;
+		}
+
+		if (flagCursor == 1)
         {
             canvasPause.SetActive(false);
             postProcessing.depthOfField.enabled = false;
@@ -213,11 +222,6 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
         
 
         #region MOUSE_AND_KEYBOARD_INPUTS
-        if (Input.GetAxis("Mouse X") < 0)
-        {
-            crosshairs.transform.Translate(1, 0, 0 * 10 * Time.deltaTime);
-        }
-
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
@@ -254,47 +258,7 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
 
     public abstract void Special();
 
-    public void detectController()
-    {
-        string[] nameOfJoysticks = Input.GetJoystickNames();
-
-        //Check whether array contains anything
-        if (nameOfJoysticks.Length > 0)
-        {
-            //Iterate over every element
-            for (int i = 0; i < nameOfJoysticks.Length; ++i)
-            {
-                //Check if the string is empty or not
-                if (!string.IsNullOrEmpty(nameOfJoysticks[i]))
-                {
-                    //Not empty, controller temp[i] is connected
-                    Debug.Log("Controller " + i + " is connected using: " + nameOfJoysticks[i]);
-                    isControllerConnected = true;
-
-                }
-                else
-                {
-                    //If it is empty, controller i is disconnected
-                    //where i indicates the controller number
-                    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-                    
-                    Plane groundPlane = new Plane(Vector3.up, Vector3.up * GunHeight);
-                    float rayDistance;
-
-                    if (groundPlane.Raycast(ray, out rayDistance))
-                    {
-                        Vector3 point = ray.GetPoint(rayDistance);
-                        this.LookAt(point);
-                        crosshairs.position = point;
-                    }
-
-                    Debug.Log("Controller: " + i + " is disconnected.");
-
-                }
-            }
-        }
-    }
-
+  
     public void pauseGame()
     {
         flagCursor = 0;

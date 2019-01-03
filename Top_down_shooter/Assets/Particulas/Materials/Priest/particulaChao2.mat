@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: particulaChao2
   m_Shader: {fileID: 4800000, guid: 87e2393ebee5ee0438cf970e1457d6de, type: 3}
@@ -59,7 +59,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EffectPower: 3.02
+    - _EffectPower: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -71,7 +71,7 @@ Material:
     - _PowerOfLines: 2.59
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.03
+    - _Speed: -2
     - _SpeenPower: 0.1
     - _Spin: 3.4
     - _SrcBlend: 1

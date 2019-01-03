@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MaterialPriest.001
   m_Shader: {fileID: 4800000, guid: 3b1a5ad50ea5fdc4587f9120c9a1cdfe, type: 3}

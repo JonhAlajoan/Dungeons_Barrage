@@ -208,17 +208,11 @@ public class LivingEntity : MonoBehaviour, IDamageable {
         }
 
     }
-	public void TakeHit(float damage, RaycastHit hit) {
+	public void TakeHit(float damage, RaycastHit hit)
+	{
 	
-		if (gameObject.tag == "PlayerHP") {
-            StartCoroutine(shake());
-			camerashaker.Shake(0.1f,0.2f,5f);
 			TakeDamage (damage);
-            StartCoroutine("ChangeColor");
-          
-        } else {
-			TakeDamage (damage);
-		}
+			StartCoroutine("ChangeColor");
 	}
 
     public void Heal(float quantityHealed)
@@ -250,6 +244,7 @@ public class LivingEntity : MonoBehaviour, IDamageable {
 		health -= damage;
 		auxHealth = health;
 
+		StartCoroutine("ChangeColor");
 		if (health <= 0 && !dead) {
 			if (gameObject.tag == "PlayerHP") {
                 modifiableColor.color = Color.white;
@@ -265,12 +260,11 @@ public class LivingEntity : MonoBehaviour, IDamageable {
 		}
 	}
 
-	IEnumerator ChangeColor(){
+	IEnumerator ChangeColor()
+	{
 		modifiableColor.color = Color.red;
 		yield return new WaitForSeconds (0.2f);
 		modifiableColor.color = Color.white;
-
-
 	}
 
     IEnumerator shake()

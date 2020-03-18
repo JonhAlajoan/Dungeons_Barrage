@@ -125,7 +125,6 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
 
     #endregion
 
- 
     protected virtual void Start()
     {
         hasFoundAllReferences = false;
@@ -377,6 +376,8 @@ public abstract class ClassesPlayer : MonoBehaviour, IDamageable {
         {
             OnDeath();
         }
+
+        SteamLeaderboard.UpdateScore(scoreUpdt.GetComponent<Score>().scoreInt);
 
         TrashMan.spawn("Enemy_Explosion", gameObject.transform.position, new Quaternion(0,0,0,0));
 

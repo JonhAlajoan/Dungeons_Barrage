@@ -16,23 +16,29 @@ public class Spawner : MonoBehaviour {
 	GameObject sfxController;
 	audioController auxSfxController;
 	public LightOrbEnemy enemyLight;
+	bool isBossAlive;
 
-	void Start() {
+	void Start()
+	{
 		sfxController = GameObject.FindWithTag ("audioSource");
 		auxSfxController = sfxController.GetComponent<audioController> ();
 
 		enemyPositionCorrection = new Vector3 (spawnPos.position.x,3,spawnPos.position.z);
 		randomSort = Random.Range (1, 101);
+		isBossAlive = false;
 
 	}
 
-	void Update() {
+	void Update()
+	{
 		enemyPositionCorrection = new Vector3 (spawnPos.position.x, spawnPos.position.y, spawnPos.position.z);
-		if (enemiesRemainingToSpawn<=0) {
+		if (enemiesRemainingToSpawn<=0 && !isBossAlive)
+		{
 			NextWave ();
 		}
 
-		if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime) {
+		if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime && !isBossAlive)
+		{
 			enemiesRemainingToSpawn--;
 			nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
 			randomSort = Random.Range (1, 101);
@@ -44,7 +50,8 @@ public class Spawner : MonoBehaviour {
 				TrashMan.spawn ("WindOrbPrefab", spawnPos.transform.position, spawnPos.transform.rotation);
 			}
 
-			if (randomSort <= 10) {
+			if (randomSort <= 10)
+			{
 
 				int randomChoose = Random.Range (0, 2);
 
@@ -82,24 +89,34 @@ public class Spawner : MonoBehaviour {
 
 		}
 	}
-	public void OnEnemyDeath() {
+	public void OnEnemyDeath()
+	{
 		enemiesRemainingAlive--;
-
 	}
 
-	void NextWave() {
+	void NextWave()
+	{
 		currentWaveNumber ++;
-		if (currentWaveNumber - 1 < waves.Length) {
+		if (currentWaveNumber - 1 < waves.Length)
+		{
+			if(currentWaveNumber >= 2)
+			{
+				Random.Range(0, 101);
+				enemiesRemainingToSpawn = 0;
+
+			}
 			currentWave = waves [currentWaveNumber - 1];
 			enemiesRemainingToSpawn = currentWave.enemyCount;
 			enemiesRemainingAlive = enemiesRemainingToSpawn;
 		}
 	}
-	IEnumerator nextWaveCooldown(){
+	IEnumerator nextWaveCooldown()
+	{
 		yield return new WaitForSeconds (10f);
 		NextWave ();
 	}
-	IEnumerator delaySound(string typeSound){
+	IEnumerator delaySound(string typeSound)
+	{
 		yield return new WaitForSeconds (0.5f);
 		auxSfxController.PlaySFXSounds (typeSound);
 	}

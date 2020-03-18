@@ -41,10 +41,19 @@ public class SteamLeaderboard : MonoBehaviour
         FindLeaderboard();
     }
 
-
+    //this method is used to search the leaderboard by name with a SteamAPICall
     public static void FindLeaderboard()
     {
+        //this call finds the leaderboard by name (in this case the nam is already on a variable, but you could use a string normally)
         SteamAPICall_t _steamAPICall = SteamUserStats.FindLeaderboard(m_leaderboardName);
+
+
+        //---------------------------------------------------------------------------------------------------------------------------
+        //The variable "m_leaderboardFindResult" is a call result that needs to be used in conjuction with an "OnLeaderBoardFindResult" Method
+        //if the result of the call is true, it'll change the m_steamLeaderboard
+        //---------------------------------------------------------------------------------------------------------------------------
+
+
         m_leaderboardFindResult.Set(_steamAPICall, OnLeaderBoardFindResult);
     }
 
@@ -69,8 +78,10 @@ public class SteamLeaderboard : MonoBehaviour
         }
     }
 
+    //UpdateScore into the Steam leaderboards
     static public void UpdateScore(int _score)
     {
+        //If the leaderboard wasn't initiated, it'll show an error. (this is set by the findLeaderboard method)
         if (!m_leaderboardInitiated)
             Debug.Log("!!!!!!!! The Leaderboard was not found! !!!!!!!");
         else
@@ -93,6 +104,7 @@ public class SteamLeaderboard : MonoBehaviour
         Debug.Log("STEAM LEADERBOARDS: failure - " + _IOFailure + " Completed - " + _callback.m_bSuccess + " NewScore: " + _callback.m_nGlobalRankNew + " Score: " + _callback.m_nScore + " HasChanged - " + _callback.m_bScoreChanged);
     }
 
+    //This checks if the leaderboard was successfully downloaded or not and updates the variables that'll be used in conjuction with the SteamAPI Handler
     static private void OnLeaderBoardScoresDownloaded(LeaderboardScoresDownloaded_t _callback, bool _IOFailure)
     {
         m_leaderboardEntries = _callback.m_hSteamLeaderboardEntries;

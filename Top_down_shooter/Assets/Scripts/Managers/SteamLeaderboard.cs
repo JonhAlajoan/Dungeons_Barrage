@@ -7,9 +7,16 @@ using System.Threading;
 
 public class LeaderboardCell
 {
-    public Image playerImage;
-    public Text playerName;
-    public Text playerScore;
+    public Sprite playerImage;
+    public string playerName;
+    public int playerScore;
+
+    public LeaderboardCell(Sprite _playerImage, string _playerName, int _playerScore)
+    {
+        playerImage = _playerImage;
+        playerName = _playerName;
+        playerScore = _playerScore;
+    }
 }
 
 public class SteamLeaderboard : MonoBehaviour
@@ -21,6 +28,14 @@ public class SteamLeaderboard : MonoBehaviour
     private static SteamLeaderboard_t m_steamLeaderBoard;
 
     private static SteamLeaderboardEntries_t m_leaderboardEntries;
+
+    public static List<LeaderboardCell> leaderboardPLayersList = new List<LeaderboardCell>();
+
+
+    public Image playerImg;
+    public Text ScoreText;
+    public Text NameText;
+
 
     //Used by the method OnLeaderBoardFindResult() to check if the leaderboard was found or not.
     private static bool m_leaderboardInitiated;
@@ -56,7 +71,7 @@ public class SteamLeaderboard : MonoBehaviour
 
         m_leaderboardFindResult.Set(_steamAPICall, OnLeaderBoardFindResult);
     }
-
+    
     static public void DownloadLeaderboardEntries()
     {
         if (!m_leaderboardInitiated)
@@ -66,15 +81,47 @@ public class SteamLeaderboard : MonoBehaviour
             SteamAPICall_t _steamAPICall = SteamUserStats.DownloadLeaderboardEntries(m_steamLeaderBoard, ELeaderboardDataRequest.k_ELeaderboardDataRequestGlobal, 1, 5);
             m_scoresDownloadedResult.Set(_steamAPICall, OnLeaderBoardScoresDownloaded);
         }
+        
     }
 
     static public void UseDownloadedEntries()
     {
         for (int i = 0; i < m_leaderboardCount; i++)
         {
-            LeaderboardEntry_t LeaderboardEntry;
-            bool ret = SteamUserStats.GetDownloadedLeaderboardEntry(m_leaderboardEntries, i, out LeaderboardEntry, null, 0);
-            Debug.Log("Score: " + LeaderboardEntry.m_nScore + " User ID: " + SteamFriends.GetFriendPersonaName(LeaderboardEntry.m_steamIDUser));
+            LeaderboardEntry_t _LeaderboardEntry;
+            Sprite _playerImage;
+
+            bool ret = SteamUserStats.GetDownloadedLeaderboardEntry(m_leaderboardEntries, i, out _LeaderboardEntry, null, 0);
+            Debug.Log("Score: " + _LeaderboardEntry.m_nScore + " User ID: " + SteamFriends.GetFriendPersonaName(_LeaderboardEntry.m_steamIDUser));
+            _playerImage = FetchAvatar(_LeaderboardEntry.m_steamIDUser);
+
+            leaderboardPLayersList.Insert(i,new LeaderboardCell(_playerImage, SteamFriends.GetFriendPersonaName(_LeaderboardEntry.m_steamIDUser), _LeaderboardEntry.m_nScore));
+        }
+    }
+
+
+    public void TestList()
+    {
+        for (int i = 0; i < leaderboardPLayersList.Count; i++)
+        {
+            Debug.Log("------------------------------------------------------" + "\n" +
+                      "Name: " + leaderboardPLayersList[i].playerName + "\n" +
+                      "Score: " + leaderboardPLayersList[i].playerScore + "\n" +
+                       "Image: " + leaderboardPLayersList[i].playerImage + "\n" +
+                      "-------------------------------------------------------");
+
+            playerImg.sprite = leaderboardPLayersList[i].playerImage;
+            ScoreText.text = leaderboardPLayersList[i].playerScore.ToString();
+            NameText.text = leaderboardPLayersList[i].playerName;
+
+
+            /*if(leaderboardPLayersList[i].playerImage!=null)
+                Debug.Log("Imagem: " + leaderboardPLayersList[i].playerImage);
+            else if(leaderboardPLayersList[i].playerName != null)
+                Debug.Log("Name: " + leaderboardPLayersList[i].playerName);
+
+            Debug.Log("Score: " + leaderboardPLayersList[i].playerScore);
+            */
         }
     }
 
@@ -91,6 +138,47 @@ public class SteamLeaderboard : MonoBehaviour
         }       
     }
 
+    
+
+    public static Sprite FetchAvatar(CSteamID _steamID)
+    {
+        int _avatarInt;
+        uint _width, _height;
+        Texture2D _downloadedAvatar;
+        Rect _rect = new Rect(0, 0, 184, 184);
+        Vector2 _pivot = new Vector2(0.5f, 0.5f);
+
+        _avatarInt = SteamFriends.GetLargeFriendAvatar(_steamID);
+
+        while (_avatarInt == -1)
+        {
+            Debug.Log("avatar not found");
+            return null;
+        }
+
+        if(_avatarInt > 0)
+        {
+            SteamUtils.GetImageSize(_avatarInt, out _width, out _height);
+
+            if(_width > 0 && _height > 0)
+            {
+                byte[] _avatarStream = new byte[4 * (int)_width * (int)_height];
+
+                SteamUtils.GetImageRGBA(_avatarInt, _avatarStream, 4 * (int)_width * (int)_height);
+
+                _downloadedAvatar = new Texture2D((int)_width, (int)_height, TextureFormat.RGBA32, false);
+                _downloadedAvatar.LoadRawTextureData(_avatarStream);
+                _downloadedAvatar.Apply();
+
+                return(Sprite.Create(_downloadedAvatar, _rect, _pivot));
+            }
+        }
+
+        return null;
+    }
+
+
+    #region callback methods
     static private void OnLeaderBoardFindResult(LeaderboardFindResult_t _callback, bool _IOFailure)
     {
         Debug.Log("STEAM LEADERBOARDS: Found - " + _callback.m_bLeaderboardFound + " leaderboardID - " + _callback.m_hSteamLeaderboard.m_SteamLeaderboard);
@@ -112,6 +200,7 @@ public class SteamLeaderboard : MonoBehaviour
 
         Debug.Log("Leaderboard: " + _callback.m_hSteamLeaderboard + " Entries: " + _callback.m_hSteamLeaderboardEntries + "Count: " + _callback.m_cEntryCount);
     }
+    #endregion
 
     private void Update()
     {
@@ -125,6 +214,9 @@ public class SteamLeaderboard : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
             UseDownloadedEntries();
+
+        if (Input.GetKeyDown(KeyCode.C))
+            TestList();
     }
 
 }

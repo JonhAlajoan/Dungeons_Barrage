@@ -21,20 +21,29 @@ public class LeaderboardCell
 
 public class SteamLeaderboard : MonoBehaviour
 {
+    //Leaderboard name, can be put directly into the "SteamUserStats.FindLeaderBoard"
     private const string m_leaderboardName = "db_teste_board";
 
+    //Quantity of entries found on a given leaderboard
     private static int m_leaderboardCount;
 
+    //Steam leaderboard got by the 
     private static SteamLeaderboard_t m_steamLeaderBoard;
 
     private static SteamLeaderboardEntries_t m_leaderboardEntries;
 
-    public static List<LeaderboardCell> leaderboardPLayersList = new List<LeaderboardCell>();
+    private static List<LeaderboardCell> leaderboardPLayersList = new List<LeaderboardCell>();
 
+    private static List<GameObject> leaderboardCellList = new List<GameObject>();
 
-    public Image playerImg;
-    public Text ScoreText;
-    public Text NameText;
+    [SerializeField]
+    private Transform m_Leaderboardtarget;
+
+    [SerializeField]
+    private GameObject m_leaderboardPrefab;
+
+    [SerializeField]
+    private float m_distanceBetweenCells;
 
 
     //Used by the method OnLeaderBoardFindResult() to check if the leaderboard was found or not.
@@ -93,35 +102,51 @@ public class SteamLeaderboard : MonoBehaviour
 
             bool ret = SteamUserStats.GetDownloadedLeaderboardEntry(m_leaderboardEntries, i, out _LeaderboardEntry, null, 0);
             Debug.Log("Score: " + _LeaderboardEntry.m_nScore + " User ID: " + SteamFriends.GetFriendPersonaName(_LeaderboardEntry.m_steamIDUser));
-            _playerImage = FetchAvatar(_LeaderboardEntry.m_steamIDUser);
 
-            leaderboardPLayersList.Insert(i,new LeaderboardCell(_playerImage, SteamFriends.GetFriendPersonaName(_LeaderboardEntry.m_steamIDUser), _LeaderboardEntry.m_nScore));
+            _playerImage = FetchAvatar(_LeaderboardEntry.m_steamIDUser,i);
+
+            leaderboardPLayersList.Insert(i, new LeaderboardCell(_playerImage, SteamFriends.GetFriendPersonaName(_LeaderboardEntry.m_steamIDUser), _LeaderboardEntry.m_nScore));
+          
         }
     }
 
 
-    public void TestList()
+    public void InstantiateNewLeaderboardCell()
     {
+
         for (int i = 0; i < leaderboardPLayersList.Count; i++)
         {
+            Vector2 _cellPosition;
+            GameObject _instantiatedCell = Instantiate(m_leaderboardPrefab);
+            _instantiatedCell.transform.parent = m_Leaderboardtarget.transform;
+
+            if (leaderboardCellList.Count > 0)
+                _cellPosition = new Vector2(leaderboardCellList[i - 1].transform.localPosition.x,
+                    leaderboardCellList[i - 1].transform.localPosition.y - m_distanceBetweenCells);
+            else
+                _cellPosition = new Vector2(0, 0);
+
+            _instantiatedCell.transform.localPosition = _cellPosition;
+
+            leaderboardCellList.Insert(i, _instantiatedCell);
+
+            Image _playerImage = leaderboardCellList[i].transform.GetComponentInChildren<Image>();
+            Text[] _playerTexts = leaderboardCellList[i].transform.GetComponentsInChildren<Text>();
+
+            _playerImage.sprite = leaderboardPLayersList[i].playerImage;
+            _playerTexts[0].text = leaderboardPLayersList[i].playerName;
+            _playerTexts[1].text = leaderboardPLayersList[i].playerScore.ToString();
+
+
             Debug.Log("------------------------------------------------------" + "\n" +
                       "Name: " + leaderboardPLayersList[i].playerName + "\n" +
                       "Score: " + leaderboardPLayersList[i].playerScore + "\n" +
                        "Image: " + leaderboardPLayersList[i].playerImage + "\n" +
                       "-------------------------------------------------------");
-
+            /*
             playerImg.sprite = leaderboardPLayersList[i].playerImage;
             ScoreText.text = leaderboardPLayersList[i].playerScore.ToString();
-            NameText.text = leaderboardPLayersList[i].playerName;
-
-
-            /*if(leaderboardPLayersList[i].playerImage!=null)
-                Debug.Log("Imagem: " + leaderboardPLayersList[i].playerImage);
-            else if(leaderboardPLayersList[i].playerName != null)
-                Debug.Log("Name: " + leaderboardPLayersList[i].playerName);
-
-            Debug.Log("Score: " + leaderboardPLayersList[i].playerScore);
-            */
+            NameText.text = leaderboardPLayersList[i].playerName;*/
         }
     }
 
@@ -140,7 +165,7 @@ public class SteamLeaderboard : MonoBehaviour
 
     
 
-    public static Sprite FetchAvatar(CSteamID _steamID)
+    public static Sprite FetchAvatar(CSteamID _steamID, int _index)
     {
         int _avatarInt;
         uint _width, _height;
@@ -153,7 +178,6 @@ public class SteamLeaderboard : MonoBehaviour
         while (_avatarInt == -1)
         {
             Debug.Log("avatar not found");
-            return null;
         }
 
         if(_avatarInt > 0)
@@ -208,7 +232,6 @@ public class SteamLeaderboard : MonoBehaviour
        
         if (Input.GetKeyDown(KeyCode.K))
         {
-
             DownloadLeaderboardEntries();
         }
 
@@ -216,7 +239,7 @@ public class SteamLeaderboard : MonoBehaviour
             UseDownloadedEntries();
 
         if (Input.GetKeyDown(KeyCode.C))
-            TestList();
+            InstantiateNewLeaderboardCell();
     }
 
 }
